@@ -19,13 +19,15 @@ public class Main {
     public static void testTencent() {
         String url = "http://www.vip.qq.com/zhongkk.mp4";
         VideoPlayer player = VideoPlayerManager.player(url);
+        System.out.println("=====  "+player.playerName()+"播放器欢迎您  =====");
         System.out.println(player.play(url));
-        System.out.println(player.duration(url));
+        System.out.println("时长： "+player.duration(url)+"分钟");
     }
     public static void testYouku() {
         String url = "http://www.youku.com/zhongkk.mp4";
         VideoPlayer player = VideoPlayerManager.player(url);
+        System.out.println("=====  "+player.playerName()+"播放器欢迎您  =====");
         System.out.println(player.play(url));
-        System.out.println(player.duration(url));
+        System.out.println("时长： "+player.duration(url)+"分钟");
     }
 }

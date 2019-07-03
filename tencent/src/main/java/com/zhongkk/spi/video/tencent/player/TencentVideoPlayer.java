@@ -16,7 +16,7 @@ public class TencentVideoPlayer implements VideoPlayer {
      */
     @Override
     public String play(String url) {
-        return playerName()+":"+url.toUpperCase();
+        return playerName()+": "+url;
     }
 
     /**
