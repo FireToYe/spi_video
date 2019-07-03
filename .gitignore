@@ -1,0 +1,13 @@
+*.iml
+.settings/
+.metadata/
+Servers/
+.idea/
+.classpath
+.project
+.gradle/
+target/
+log/
+*.log
+*/out
+*/build

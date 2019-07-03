@@ -1,0 +1,20 @@
+plugins {
+	id 'java'
+}
+
+group 'com.zhongkk'
+version '0.0.1-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+//	compileOnly 'org.projectlombok:lombok1.18.8'
+	annotationProcessor 'org.projectlombok:lombok:1.18.8'
+	compile 'ch.qos.logback:logback-core:1.1.+'
+	compile 'ch.qos.logback:logback-classic:1.1.+'
+	compile  'com.google.guava:guava:11.0.2'
+}

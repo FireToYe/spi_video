@@ -1,0 +1,14 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+    }
+}
+rootProject.name = 'spi_video'
+include 'manager'
+include 'tencent'
+findProject(':tencent')?.name = 'spi_video_tencent_player'
+include 'example'
+findProject(':example')?.name = 'spi_video_example'
+include 'youku'
+findProject(':youku')?.name = 'spi_video_youku_player'
+
