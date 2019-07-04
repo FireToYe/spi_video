@@ -8,11 +8,14 @@ import com.zhongkk.spi.video.youku.player.YoukuVideoPlayer;
 import java.util.regex.Pattern;
 
 /**
- * Description 业务描叙信息
+ * Description 优酷播放器驱动
  *
- * @author Created by 半仙 on 2019/7/3.
+ * @author Created by 叶半仙 on 2019/7/3.
  */
 public class YoukuVideoPlayerDriver implements VideoPlayerDriver {
+    /**
+     * 如果url的格式是http://www.youku.com/的格式，代表需要使用优酷视频的播放器
+     */
     public static final String  REGEX = "^http(s)?://www\\.youku\\.com/[A-Za-z0-9\\.]*";
     public static final Pattern PATTERN = Pattern.compile(REGEX);
     @Override

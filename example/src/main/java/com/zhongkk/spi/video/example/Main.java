@@ -6,9 +6,9 @@ import com.zhongkk.spi.video.player.VideoPlayer;
 import java.sql.DriverManager;
 
 /**
- * Description 业务描叙信息
+ * Description 播放器驱动测试类
  *
- * @author Created by 半仙 on 2019/7/3.
+ * @author Created by 叶半仙 on 2019/7/3.
  */
 public class Main {
     public static void main(String[] args) {

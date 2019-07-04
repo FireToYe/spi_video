@@ -16,9 +16,9 @@ import java.util.ServiceLoader;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
- * Description 业务描叙信息
+ * Description 播放器驱动管理类
  *
- * @author Created by 半仙 on 2019/7/3.
+ * @author Created by 叶半仙 on 2019/7/3.
  */
 public class VideoPlayerManager {
     /**
@@ -32,10 +32,16 @@ public class VideoPlayerManager {
         loadInitialPlayers();
         logger.debug("加载驱动完成");
     }
+
+    /**
+     * 初始化
+     */
     private static void loadInitialPlayers(){
         ServiceLoader<VideoPlayerDriver> serviceLoader = ServiceLoader.load(VideoPlayerDriver.class);
+        // 获取所有在META-INF/services下注册的VideoPlayerDriver接口实现
         Iterator<VideoPlayerDriver> iterator = serviceLoader.iterator();
         while (iterator.hasNext()){
+            //驱动类加载
             iterator.next();
         }
     }
@@ -68,6 +74,10 @@ public class VideoPlayerManager {
         return videoPlayerDrivers;
     }
 
+    /**
+     * 注册驱动
+     * @param videoPlayerDriver
+     */
     public static synchronized void registered(VideoPlayerDriver videoPlayerDriver){
         logger.info("注册驱动：{}",videoPlayerDriver.getClass());
         registeredDrivers.addIfAbsent(videoPlayerDriver);
