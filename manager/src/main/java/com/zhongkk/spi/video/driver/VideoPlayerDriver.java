@@ -9,7 +9,18 @@ import com.zhongkk.spi.video.player.VideoPlayer;
  */
 public interface VideoPlayerDriver {
 
+    /**
+     * 获取对应的播放器
+     * @param url
+     * @return
+     * @throws IllegalAccessException
+     */
     VideoPlayer getPlayer(String url) throws IllegalAccessException;
 
+    /**
+     * 是否支持对应的url
+     * @param url
+     * @return
+     */
     boolean support(String url);
 }
